@@ -27,6 +27,7 @@ Some features required by the subject are not yet fully implemented, but this ve
 - Create or join a game room.
 - Play against other online players in real-time.
 -  For local mode, make sure to add a **guest** user in the database to enable guest access.
+
  - Controls for Player 1:  
   - Move: **O** (left), **L** (right)  
   - Shoot: **P**
