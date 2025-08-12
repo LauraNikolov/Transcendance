@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@import "./chat.css";
+@import "./dashboard.css";
+
+@layer base, components, utilities;

@@ -1,0 +1,17 @@
+@layer components {
+	.dashboard-btn {
+		@apply px-4 py-2 min-w-40;
+	}
+
+	.selected-button-style {
+		@apply rounded-xl bg-blue-900 text-white font-medium;
+	}
+
+	.grid-style {
+		@apply rounded-xl bg-white border-3 border-gray-100 p-4 flex flex-col h-full;
+	}
+
+	.stat-style {
+		@apply flex justify-center items-center gap-4 p-4 h-full;
+	}
+}

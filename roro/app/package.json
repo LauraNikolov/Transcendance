@@ -1,0 +1,53 @@
+{
+  "name": "transcendance",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && npx @tailwindcss/cli -i public/styles/tailwind.css -o public/styles/compiled.css",
+    "start": "node src/app.js",
+    "dev": "./run_dev.sh",
+    "dev-clean": "./kill_port_8080.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@babylonjs/core": "^8.12.1",
+    "@babylonjs/gui": "^8.14.0",
+    "@fastify/autoload": "^6.3.1",
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/cors": "^11.0.1",
+    "@fastify/formbody": "^8.0.2",
+    "@fastify/session": "^11.1.0",
+    "@fastify/static": "^8.2.0",
+    "@socket.io/admin-ui": "^0.5.1",
+    "@tailwindcss/cli": "^4.1.8",
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/canvas-confetti": "^1.9.0",
+    "ammo.js": "^0.0.10",
+    "ammojs-typed": "^1.0.6",
+    "babylonjs-gui": "^8.12.1",
+    "bcrypt": "^6.0.0",
+    "canvas": "^3.1.2",
+    "chart.js": "^4.5.0",
+    "fastify": "^5.3.3",
+    "fastify-cli": "^7.4.0",
+    "fastify-socket.io": "^5.1.0",
+    "google-auth-library": "^10.2.1",
+    "node": "^20.19.4",
+    "pino": "^9.7.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "sqlite3": "^5.1.7",
+    "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "@types/babylonjs": "^2.4.5",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^22.15.29",
+    "@types/pino": "^7.0.4",
+    "@types/socket.io": "^3.0.1",
+    "typescript": "^5.8.3"
+  }
+}

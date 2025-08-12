@@ -1,0 +1,4 @@
+app/src/*.js
+*.sqlite
+*.sqlite3
+.env

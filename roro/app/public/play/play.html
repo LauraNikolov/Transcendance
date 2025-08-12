@@ -1,0 +1,64 @@
+<main id="main_content">
+    <section id="gameModeSelection"
+        class="flex flex-col items-center justify-center min-h-screen px-6 space-y-16 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-yellow-400 select-none">
+
+        <h1 class="text-4xl sm:text-5xl text-yellow-400 text-center tracking-widest drop-shadow-lg">
+            Choisis ton mode de jeu
+        </h1>
+
+        <div class="flex flex-col sm:flex-row gap-10">
+            <button id="localButton"
+                class="px-8 py-5 bg-blue-700 hover:bg-blue-900 border-4 border-blue-400 rounded-lg shadow-lg transition text-lg sm:text-xl">
+                🎮 Local
+            </button>
+            <button id="remoteButton"
+                class="px-8 py-5 bg-green-700 hover:bg-green-900 border-4 border-green-400 rounded-lg shadow-lg transition text-lg sm:text-xl">
+                🌍 En ligne
+            </button>
+            <button id="tournamentButton"
+                class="px-8 py-5 bg-purple-700 hover:bg-purple-900 border-4 border-purple-400 rounded-lg shadow-lg transition text-lg sm:text-xl">
+                🏆 Tournoi
+            </button>
+        </div>
+
+    </section>
+
+    <!-- Section waitlist (cachée par défaut) -->
+    <section id="waitingForMatch"
+        class="hidden fixed inset-0 bg-black bg-opacity-95 flex-col justify-center items-center z-50 text-yellow-400 font-[Press_Start_2P] text-center space-y-8 px-8"
+        style="display: none;">
+
+        <div class="w-24 h-24 rounded-full border-4 border-yellow-400 border-t-transparent animate-spin"></div>
+
+        <p id="matchStatus" class="text-xl sm:text-2xl tracking-wider drop-shadow-md">
+            Recherche d'un adversaire...
+        </p>
+
+        <p id="opponentName" class="text-lg sm:text-xl text-green-400 hidden tracking-wider">
+            ⚔️ Adversaire trouvé : <span id="opponentNameValue" class="text-white"></span>
+        </p>
+
+        <button id="cancelQueue"
+            class="mt-4 px-8 py-3 bg-red-700 hover:bg-red-900 border-4 border-red-500 rounded-lg shadow-md text-sm sm:text-base transition">
+            ⛔ Annuler
+        </button>
+
+    </section>
+
+
+
+  <section id="scoresSection"
+    class="fixed top-6 left-1/2 -translate-x-1/2 flex flex-row gap-10 bg-black bg-opacity-80 border-4 border-yellow-400 rounded-xl shadow-xl px-8 py-4 select-none text-yellow-400 font-[Press_Start_2P] z-50 max-w-md w-full">
+
+    <div class="flex flex-col items-center px-6">
+      <span class="text-sm text-yellow-300 uppercase tracking-widest">Joueur 1</span>
+      <span id="player1ScoreValue" class="text-6xl font-extrabold drop-shadow-lg">0</span>
+    </div>
+
+    <div class="flex flex-col items-center px-6 border-l-4 border-yellow-400">
+      <span class="text-sm text-yellow-300 uppercase tracking-widest">Joueur 2</span>
+      <span id="player2ScoreValue" class="text-6xl font-extrabold drop-shadow-lg">0</span>
+    </div>
+  </section>
+
+</main>

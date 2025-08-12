@@ -1,0 +1,23 @@
+<!-- Pop-up -->
+<div id="game-invite-popup" class="absolute z-10 flex w-80 h-40 right-10 bottom-10">
+	<div class="bg-blue-100 rounded-xl shadow-md py-2 px-4 flex flex-col gap-4">
+	  <!-- Title div -->
+	  <div class="flex flex-row justify-between items-center">
+		<p class="flex title-style">Game Invite</p>
+		<button id="close-popup-btn" class="text-gray-500 hover:text-gray-800 text-xl none cursor-pointer">
+		  &times;
+		</button>
+	  </div>
+	  <!-- Text -->
+	  <div class="flex flex-col">
+		<p class="text-sm text-gray-700">You've been invited to join a game by</p>
+		<p id="inviter-name" class="text-sm text-gray-700 font-bold text-center"></p>
+	  </div>
+	  <!-- Button(s) -->
+	  <div class="flex justify-center">
+		<button id="play-btn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm cursor-pointer">
+		  Play Game
+		</button>
+	  </div>
+	</div>
+</div>

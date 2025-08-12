@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transcendance</title>
+    <script src="https://cdn.babylonjs.com/ammo.js"></script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylon.glTF2FileLoader.js"></script>
+    <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.8.1/dist/socket.io.min.js"
+        integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="script/N_main.js" defer></script>
+    <link href="./styles/compiled.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="bg-gray-100">
+    <!-- Main Content -->
+    <main class="flex-grow justify-center items-center text-center px-4  min-h-screen flex flex-col" id="main_content">
+        <h1 class="text-5xl font-bold text-blue-600 mb-6">Welcome to Transcendance</h1>
+        <p class="text-gray-600 max-w-xl mb-10">
+            Ready to play pong ?
+        </p>
+    </main>
+
+    <!-- Login Form Modal -->
+    <div id="LoginForm" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+        <form class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full space-y-6 relative">
+            <h2 class="text-2xl font-bold mb-4 text-center text-blue-600">Login</h2>
+            <div id="error_message" class="px-4 py-2 rounded-md text-sm text-center text-red-600">
+            </div>
+            <!-- Username -->
+            <label for="username" class="block text-gray-700 font-semibold">username</label>
+            <input type="username" name="username" id="username" placeholder="Enter username" required
+                class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <!-- password -->
+            <label for="password" class="block text-gray-700 font-semibold">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter Password" required
+                class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <div class="flex justify-between items-center">
+                <button type="submit"
+                    class="bg-blue-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-blue-700 transition">
+                    Login
+                </button>
+                <button type="button" id="closeLForm" class="text-gray-500 hover:text-gray-700 font-semibold">
+                    Cancel
+                </button>
+            </div>
+            <div id="googleSignInButton"></div>
+        </form>
+    </div>
+
+    <!-- Register Form Modal -->
+    <div id="RegisterForm" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+        <form class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full space-y-6 relative">
+            <h2 class="text-2xl font-bold mb-4 text-center text-blue-600">Register</h2>
+            <div id="error_message" class="px-4 py-2 rounded-md text-sm text-center text-red-600">
+            </div>
+            <!-- Username -->
+            <label for="username" class="block text-gray-700 font-semibold">Username</label>
+            <input type="username" name="username" id="username" placeholder="Enter Username" required
+                class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <!-- Email -->
+            <label for="email" class="block text-gray-700 font-semibold">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter Email" required
+                class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <!-- Password -->
+            <label for="password" class="block text-gray-700 font-semibold">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter Password" required
+                class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <div class="flex justify-between items-center">
+                <button type="submit"
+                    class="bg-blue-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-blue-700 transition">
+                    Register
+                </button>
+                <button id="closeRForm" class="text-gray-500 hover:text-gray-700 font-semibold">
+                    Cancel
+                </button>
+            </div>
+            <div id="googleRegisterSignInButton"></div>
+        </form>
+    </div>
+
+    </main>
+</body>
+
+</html>

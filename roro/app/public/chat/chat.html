@@ -1,0 +1,35 @@
+<main id="main_content" class="flex flex-col gap-2 bg-gray-100 p-2 max-w-6xl mx-auto mt-8 h-[80vh]">
+  <!-- Tournaments -->
+  <div id="tournament-section" class=" hidden flex flex-row gap-4 shadow-sm basis-[10%]">
+    <div class="flex flex-grow bg-white h-full w-full rounded-xl px-3 items-center">
+      <div class="title-style flex w-1/4">Tournaments</div>
+      <div id="tournament-text" class="text-style flex w-3/4 items-start"></div>
+    </div>
+  </div>
+
+   <div class="flex flex-grow flex-row gap-4 bg-gray-100 overflow-hidden">
+    <!-- Left chat history -->
+      <div class="chat-card w-1/4 flex flex-col">
+        <div class="flex items-center gap-8 basis-[10%] title-style h-12">All chats</div>
+        <div class="line-style"></div>
+        <div id="all-messages" class="basis-[90%] flex-grow overflow-auto text-style gap-3"></div>
+      </div>
+  
+    <!-- Middle chat area -->
+    <div id="conversation-container" class="chat-card w-full">
+      <div id="conv-placeholder" class="flex justify-center items-center h-full">
+        <p class="title-style text-center">Select a conversation or user to start chatting.</p>
+      </div>
+    </div>
+
+     <!-- Right active users -->
+    <div class="chat-card text-sm font-bold w-1/6 flex flex-col">
+      <div class="flex items-center gap-8 basis-[10%] title-style h-12">Online</div>
+      <div class="line-style"></div>
+      <div class="basis-[90%] flex-grow gap-4 overflow-auto">
+      <!-- List of active users -->
+        <ul id="user-list" class="text-style hover:text-blue-500"></ul>
+      </div>
+    </div>
+  </div>
+</main>

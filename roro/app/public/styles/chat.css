@@ -1,0 +1,79 @@
+@layer components {
+  .centered-content-chat {
+    @apply flex min-h-screen items-center justify-center m-8 max-w-6xl mx-auto px-4 py-4;
+  }
+
+  .center-frame-chat {
+    @apply bg-gray-100 min-h-screen flex flex-col items-center justify-center;
+  }
+
+  .title-style {
+      @apply text-lg font-bold text-gray-700;
+  }
+
+  .line-style {
+    @apply outline-1 outline-gray-100;
+  }
+
+  .chat-card {
+    @apply flex flex-col gap-3 mb-4 bg-white p-4 shadow-sm rounded-xl;
+  }
+
+  .box-style {
+    @apply rounded-xl bg-gray-100 p-2 shadow-inner;
+  }
+
+  .button-style {
+    @apply rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-900 hover:cursor-pointer;
+  }
+
+  .chat-time {
+    @apply text-sm font-normal text-gray-500;
+  }
+
+  .chat-date {
+    @apply text-sm font-normal text-gray-500 text-center;
+  }
+
+  .chat-bubble-header {
+    @apply flex flex-row items-center space-x-2 ;
+  }
+
+  .dropdown-menu-style {
+    @apply mr-5 w-40 min-w-40 bg-gray-100 rounded-xl shadow-sm transition ease-out duration-150 origin-top-right;
+  }
+
+  .dropdown-item-style {
+    @apply text-sm font-normal text-gray-900 rounded-xl hover:bg-blue-200 block w-full text-left p-2 cursor-pointer;
+  }
+
+  .text-style {
+    @apply text-sm font-medium text-black;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar {
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 9999px;
+      background-color: theme('colors.gray.100');
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 9999px;
+      background-color: theme('colors.gray.300');
+    }
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

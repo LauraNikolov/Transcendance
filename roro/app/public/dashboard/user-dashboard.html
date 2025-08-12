@@ -1,0 +1,39 @@
+<div class="grid grid-cols-3 h-full w-full p-5">
+  <!-- Row 1 -->
+    <!-- Total Games -->
+    <div class="grid-style col-span-1">
+      <p class="title-style">Total games played</p>
+      <div class="stat-style">
+          <i class="fas fa-gamepad text-blue-300 text-5xl"></i>
+          <div id="games-played" class="text-3xl font-bold text-gray-800"></div>
+      </div>
+    </div>
+
+    <!-- Win rate : pie chart -->
+    <div class="grid-style col-span-1">
+      <p class="title-style">Win rate</p>
+      <canvas id="pie-chart" class="m-4"></canvas>
+    </div>
+
+    <!-- Win streak -->
+    <div class="grid-style col-span-1">
+      <p class="title-style">Current win streak</p>
+        <div class="stat-style">
+          <i class="fas fa-fire text-blue-300 text-5xl"></i>
+          <div id="current-streak" class="text-3xl font-bold text-gray-800"></div>
+        </div>
+        <div id="longest-streak" class="text-sm font-semibold text-gray-500 text-center mt-4"></div>
+    </div>
+
+  <!-- Row 2: Bar chart -->
+  <div class="grid-style col-span-3">
+    <p class="title-style">Daily games played</p>
+    <canvas id="bar-chart" class="m-4"></canvas>
+  </div>
+
+  <!-- Row 3: Line chart -->
+  <div class="grid-style col-span-3">
+    <p class="title-style">Win rate over time</p>
+    <canvas id="line-chart" class="m-4"></canvas>
+  </div>
+</div>

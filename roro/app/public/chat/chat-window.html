@@ -1,0 +1,28 @@
+<div id="chat-window" class="flex flex-col relative h-full gap-3">
+  <!-- Header -->
+  <div class="flex flex-row items-center gap-8 basis-[10%]">
+    <img class="h-12 w-12 rounded-xl" src="./assets/default-icon.png" />
+    <div id="recipient-name" class="title-style"></div>
+    <div id="blocked-msg" class="text-red-500 text-sm bg-gray-100 rounded-lg p-2 hidden">User blocked</div>
+  </div>
+
+  <!-- Dropdown menu -->
+  <div class="absolute z-10 right-0">
+    <svg id="options-icon" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-300 cursor-pointer ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 6v.01M12 12v.01M12 18v.01" />
+    </svg>
+    <div id="options-menu" class="dropdown-menu-style opacity-0 scale-20 pointer-events-none">
+      <button data-action="invite-game" class="dropdown-item-style">Invite to game</button>
+      <button data-action="block-user" class="dropdown-item-style">Block user</button>
+    </div>
+  </div>
+
+  <!-- Conversation container -->
+  <div id="conversation-box" class="box-style flex-grow overflow-auto gap-4 px-4 custom-scrollbar"></div>
+
+  <!-- Input section -->
+  <div class="basis-[10%] flex flex-row rounded-md gap-2">
+    <textarea id="msg-input" rows="1" class="box-style resize-none w-4/5 no-scrollbar focus:outline-none focus:border-none" placeholder="Type message..."></textarea>
+    <button id="send-btn" class="button-style w-1/5">Send</button>
+  </div>
+</div>
